@@ -20,7 +20,7 @@ const createBookAction = (bookData) => {
       const config = {
         "Content-Type": "application/json",
       };
-      const { data } = await axios.post("http://localhost:3002/api/books", bookData, config);
+      const { data } = await axios.post("https://ashish-backend.onrender.com/api/books", bookData, config);
 
       dispatch({
         type: CREATE_BOOK_SUCCESS,
@@ -49,7 +49,7 @@ const fetchBooksAction = () => {
         },
       };
       // make http call to our backend
-      const { data } = await axios.get("http://localhost:3002/api/books", config);
+      const { data } = await axios.get("https://ashish-backend.onrender.com/api/books", config);
       dispatch({
         type: FETCH_BOOK_SUCCESS,
         payload: data,
@@ -77,7 +77,7 @@ const deleteBookAction = () => {
         },
       };
       // make http call to our backend
-      const { data } = await axios.get("http://localhost:3002/api/books", config);
+      const { data } = await axios.get("https://ashish-backend.onrender.com/api/books", config);
       dispatch({
         type: DELETE_BOOK_SUCCESS,
         payload: data,

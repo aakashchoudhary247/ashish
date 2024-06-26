@@ -71,7 +71,7 @@ usersRoute.put(
       const updatedUser = await user.save();
 
       res.json({
-        _id: updatedUser_id,
+        _id: updatedUser._id,
         name: updatedUser.name,
         password: updatedUser.password,
         email: updatedUser.password,

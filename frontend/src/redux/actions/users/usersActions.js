@@ -31,7 +31,7 @@ const registerUserAction = (name, email, password) => {
       };
 
       const { data } = await axios.post(
-        "http://localhost:3002/api/users/register",
+        "https://ashish-backend.onrender.com/api/users/register",
         {
           name,
           email,
@@ -74,7 +74,7 @@ const loginUserAction = (email, password) => {
       };
 
       const { data } = await axios.post(
-        "http://localhost:3002/api/users/login",
+        "https://ashish-backend.onrender.com/api/users/login",
         { email, password },
         config
       );
@@ -119,7 +119,7 @@ const getUserProfileAction = () => {
         },
       };
       // make request
-      const { data } = await axios.get("http://localhost:3002/api/users/profile", config);
+      const { data } = await axios.get("https://ashish-backend.onrender.com/api/users/profile", config);
       dispatch({
         type: USER_PROFILE_SUCCESS,
         payload: data,
@@ -148,7 +148,7 @@ const updateUser = (name, email, password) => {
         },
       };
       const { data } = await axios.put(
-        "http://localhost:3002/api/users/profile/update",
+        "https://ashish-backend.onrender.com/api/users/profile/update",
         {
           email,
           password,
